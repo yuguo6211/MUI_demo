@@ -1,0 +1,115 @@
+extends ../layouts/layout.jade
+block con
+  div(style="position:relative;height:220px;")
+    img(src="/images/dpjia_logo.png" style="position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);transform:translate(-50%,0);width:250px;")
+    p( style="position:absolute;top:80%;width:100%;text-align:center;font-size:30px;") 欢迎使用搭配家后台管理系统
+  div.row(style="display:none")
+    div.col-md-12
+      //- 仪表盘
+      div.box-header.with-border
+        h3.box-title 仪表盘 
+        span.dashboard-subtitle 今日指标
+      div.box-body
+        div.row
+          div.col-lg-3.col-xs-6
+            div.small-box.bg-aqua
+              div.inner
+                h3 150
+                p 新预约
+              div.icon
+                i.fa.fa-suitcase
+              a.small-box-footer(href="javascript:;") 更多
+          div.col-lg-3.col-xs-6
+            div.small-box.bg-green
+              div.inner
+                h3 46
+                p 新顾客
+              div.icon
+                i.fa.fa-user-plus
+              a.small-box-footer(href="javascript:;") 更多
+          div.col-lg-3.col-xs-6
+            div.small-box.bg-yellow
+              div.inner
+                h3 58
+                p 新订单
+              div.icon
+                i.fa.fa-bar-chart
+              a.small-box-footer(href="javascript:;") 更多
+          div.col-lg-3.col-xs-6
+            div.small-box.bg-red
+              div.inner
+                h3 190
+                p 销售额
+              div.icon
+                i.fa.fa-pie-chart
+              a.small-box-footer(href="javascript:;") 更多
+    div.col-md-7
+      //- 交易数据
+      div.nav-tabs-custom
+        ul.nav.nav-tabs.pull-right
+          li
+            a(href="#revenue-chart" data-toggle="tab") 方案
+          li
+            a(href="#revenue-chart" data-toggle="tab") 订单
+          li
+            a(href="#revenue-chart" data-toggle="tab") 售后
+          li.active
+            a(href="#revenuechart-" data-toggle="tab") 预约
+          li.pull-left.header 
+            i.fa.fa-inbox 交易数据
+        div.tab-content.no-padding
+          div.chart.tab-pane.active#revenue-chart(style="position: relative; height: 300px;")
+    div.col-md-5
+      //- 访问统计
+      div.box.box-solid.bg-teal-gradient
+        div.box-header
+          i.fa.fa-th
+          h3.box-title 访问统计
+          div.box-tools.pull-right
+            button.btn.bg-teal.btn-sm(data-widget="collapse")
+              i.fa.fa-minus
+            button.btn.bg-teal.btn-sm(data-widget="remove")
+              i.fa.fa-times
+        div.box-body.border-radius-none
+          div.chart#line-chart(style="height: 250px;")
+        div.box-footer.no-border
+          div.row
+            div.col-xs-4.text-center
+              input.knob(data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC")
+              div.knob-label 页面访问
+            div.col-xs-4.text-center
+              input.knob(data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC")
+              div.knob-label 独立访问
+            div.col-xs-4.text-center
+              input.knob(data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC")
+              div.knob-label 独立IP
+    div.col-md-7         
+      div.box.box-primary(style="position: relative;")
+      div.box-header.ui-sortable-handle
+        i.fa.fa-file-text-o
+        h3.box-title 待办事项
+        div.box-tools.pull-right
+          ul.pagination.pagination-sm.inline
+            li 
+              a(href="#") «
+            li
+              a(href="#") 1
+            li
+              a(href="#") 2
+            li
+              a(href="#") 3
+            li
+              a(href="#") »
+      div.box-body
+        ul.todo-list.ui-sortable
+          li(v-for="item in todo")
+            input(type="checkbox" value="")
+            span.text {{ item.things }}
+            small.label(v-bind:class="item.bg") {{ item.time }}
+            div.tools
+              i.fa.fa-edit
+              i.fa.fa-trash-o
+      div.box-footer.clearfix.no-border
+        button.btn.btn-default.pull-right 添加事项
+        
+

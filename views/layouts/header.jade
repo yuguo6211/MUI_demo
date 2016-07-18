@@ -1,0 +1,62 @@
+header.main-header
+  a(href="/" class="logo")
+    span.logo-mini: b 搭配家
+    img.logo-lg(src="/images/logo.png")
+   
+  nav.navbar.navbar-static-top(style="position:relative;")
+    a(href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button")
+      span.sr-only Toggle navigation
+    label(v-cloak) {{session.username}}
+    label.label.label-warning.mem-role(v-cloak) {{session.accountTypAlia}}
+
+    div.navbar-custom-menu(style="position:absolute;top:0;right:0;")
+      ul.nav.navbar-nav
+        
+        //- 通知
+        //- li.dropdown.notifications-menu
+        //-   a(href="#" class="dropdown-toggle" data-toggle="dropdown")
+        //-     i.fa.fa-bell-o
+        //-     span.label.label-warning 10
+
+        //- //- 待办事项
+        li.dropdown.tasks-menu
+          a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true")
+            i.fa.fa-bell-o
+            span.label.label-danger 9
+          ul.dropdown-menu
+            li.header 您有9个消息
+            li
+              ul.menu
+                li
+                  a.notice-box(href="#")
+                    span.fa.fa-windows.notice-logo
+                    h3 系统通知
+                      small.pull-right 2016-06-22
+                    div.notice-content 有新的功能上线
+                li
+                  a.notice-box(href="#")
+                    span.fa.fa-volume-up.notice-logo
+                    h3 公告通知
+                      small.pull-right 2016-06-22
+                    div.notice-content 有新的功能上线
+                li
+                  a.notice-box(href="#")
+                    span.fa.fa-envelope-o.notice-logo
+                    h3 私信通知
+                      small.pull-right 2016-06-22
+                    div.notice-content 有新的功能上线
+            li.footer
+              a(href="#") 查看所有
+
+
+
+        //- 登陆会员
+        li.dropdown.user.user-menu(v-cloak)
+          a(href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false")
+            img(src="{{session.profile_url}}" class="user-image" alt="User Image")
+            span.hidden-xs {{session.username}}
+          ul.dropdown-menu(role="menu")
+            li: a(href="/mem/me") 修改资料
+            li: a(href="#" v-on:click="logout()") 注销
+
+           

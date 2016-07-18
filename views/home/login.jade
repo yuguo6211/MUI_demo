@@ -1,0 +1,142 @@
+doctype html
+html
+  head
+    include ../layouts/top.jade
+
+  body.hold-transition.login-page#bgWraper
+    div.login-box
+      div.login-logo: img(src="/images/login.png")
+
+      div.box.login-box-body
+        p.login-box-msg 搭配家管理后台
+
+        div.form-group.has-feedback
+          input(type="text" class="form-control" placeholder="用户名" v-model="loginData.username")
+          i.fa.fa-user.form-control-feedback
+
+        div.form-group.has-feedback
+          input(type="password" class="form-control" placeholder="密码" v-model="loginData.password")
+          i.fa.fa-lock.form-control-feedback
+        div.row
+          div.col-xs-12
+            button(type="button" class="btn btn-block btn-primary btn-flat" @click="login()") 登录
+           
+
+    footer
+      include ../layouts/footer.jade
+  
+  style.
+    body{
+      height: 100%; position: absolute; top: 0; width: 100%; background-color: #f3f3f4!important;
+    }
+    .form-group{
+      margin: 30px 0;
+    }
+    .login-logo, .register-logo{
+      position: absolute;    top: 97px;    left: 50%;    z-index: 101;    margin-left: -35px;
+    }
+    .login-box, .register-box{
+      margin: 150px auto; 
+    }
+    canvas{
+       left:0; top: 0; z-index: -1; position: absolute
+    }
+
+  script.
+    particlesJS("bgWraper", {
+      "particles": {
+        "number": {
+          "value": 40,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#DDD"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.3,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 20,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 30,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 300,
+          "color": "#DDD",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          
+        }
+      },
+      "retina_detect": true
+    });
+
+
+

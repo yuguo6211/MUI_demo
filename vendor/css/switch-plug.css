@@ -1,0 +1,47 @@
+.switch-plug{
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.switch-plug[data-switch="on"] {
+  background-color: #3C6;
+}
+.switch-plug[data-switch="off"]{
+  background-color: #aaa;
+}
+.switch-plug:before {
+  position: absolute;
+  top: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.switch-plug[data-switch="on"]:before {
+  content: '';
+  right: 2px;
+}
+.switch-plug[data-switch="off"]:before {
+  content:'';
+  left: 2px;
+}
+.switch-plug:after {
+  position: absolute;
+  top: 3px;
+  display: inline-block;
+  color: #fff;
+}
+.switch-plug[data-switch="on"]:after {
+  content: attr(data-content);
+  left: 6px;
+  font-size: 12px;
+}
+.switch-plug[data-switch="off"]:after {
+  content: attr(data-content);
+  right: 7px;
+  font-size: 12px;
+}

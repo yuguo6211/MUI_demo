@@ -1,0 +1,11 @@
+//- 测试环境下额外的JS代码
+//- script(src="/dist/js/development.js") 
+block jsExt
+script(src="/dist/js/controller/#{route.controller}.js")
+script.
+  if(typeof APP.#{route.controller}.#{route.action} == 'function'){
+    SITE.Init(function(){
+      CONTROLLER = new APP.#{route.controller}.#{route.action}
+    })
+  }
+  

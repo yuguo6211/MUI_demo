@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    include ./top.jade
+
+  body.skin-blue.sidebar-mini
+    header
+      include ./header.jade
+    include ./sidebar.jade
+    div.content-wrapper
+      section.content-header
+        if page
+          h1
+            span= page.name
+            if page.back
+              a.back(href="#{page.back}") <<返回列表
+          ol.breadcrumb
+            li
+              a(href="/")
+                i.fa.fa-dashboard
+                | Home
+
+            if page.breadcrumb
+              each val in page.breadcrumb
+                li
+                  if val[1]
+                    a(href="#{val[1]}")= val[0]
+                  else
+                    span= val[0]
+            li.active= page.name
+
+      section.content
+        block con
+        footer
+          include ./footer.jade
+
+

@@ -1,0 +1,9 @@
+/* 公共变量 */
+$site_bg_color: #FFF;
+$font-color: #333;
+
+
+@mixin left($value: 10px){
+  float: left;
+  margin-left: $value;
+}
