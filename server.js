@@ -39,7 +39,7 @@ let renderAction = async (ctx, controller, action)=> {
         action: action
       },
       query: qs.parse(url.parse(ctx.request.url).query),
-      menus: menus,
+      /*menus: menus,*/
      /* page: pages[controller + '/' + action]*/
   })
 }
@@ -73,4 +73,4 @@ app
 
 
 
-app.listen(4100);
+app.listen(5005);

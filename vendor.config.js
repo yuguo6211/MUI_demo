@@ -1,45 +1,16 @@
 var assets =  {
   js: [
     'jquery',
-    /*'jquery.validate.min',
-    'jquery.form',*/
-    'jquery.twbsPagination',
-    'es6-promise',
-    'moment.min',
-    'moment-zh-cn',
-    'underscore-min',
-    'js.cookie',
-    'bootstrap',
-    /*'Chart',*/
-    'raphael',
-    'morris',
-    'jquery.knob',
-    'jquery.fancybox',
-    /*'bootstrap-timepicker',
-    'bootstrap-datepicker',
-    'bootstrap-colorpicker',*/
+    'mui',
     'vue.min',
-    'vue-animated-list',
-    'AdminLTE',
-    'particles.min',
-    'store.min',
-    /*'zepto.min',*/
-    'dropload.min',
-    'av'
+    'js.cookie',
+    'underscore-min',
+    'echarts-all'
   ],
   css: [
+    'mui',
     'font-awesome',
     'bootstrap',
-    'all-skins',
-    'jquery.fancybox',
-    /*'bootstrap-timepicker',
-    'bootstrap-datepicker3',
-    'bootstrap-colorpicker',
-    'bootstrap-theme',*/
-    'animate',
-    'morris',
-    'AdminLTE',
-    'dropload'
   ]
 }
 

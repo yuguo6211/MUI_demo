@@ -759,7 +759,7 @@
 
 	window.SITE.Init = function (callback) {
 
-	  getLoginState().then(showMenuByRole).then(getRefcds).then(callback);
+	  getLoginState().then(showMenuByRole).then(callback);
 	};
 
 	/**
@@ -805,14 +805,15 @@
 	/**
 	 * 获取引用表数据
 	 */
-	function getRefcds() {
-	  return new Promise(function (resolve) {
-	    Refcd.all().then(function (data) {
-	      SITE.Refcds = data;
-	      resolve();
-	    });
-	  });
-	}
+	/*function getRefcds(){
+	  return new Promise((resolve)=> {
+	    Refcd.all().then((data)=> {
+	      SITE.Refcds = data
+	      resolve()
+	    })
+	  })
+	  
+	}*/
 
 /***/ },
 /* 5 */
@@ -1299,9 +1300,9 @@
 
 	$(function () {
 	  // lightbox
-	  $(".fancybox").fancybox({
-	    arrows: false
-	  });
+	  /* $(".fancybox").fancybox({
+	     arrows: false,
+	   });*/
 	});
 
 /***/ }

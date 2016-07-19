@@ -1,0 +1,23 @@
+extends ../layouts/layout.jade
+block con
+  ul.mui-table-view.mui-table-view-chevron
+    li.mui-table-view-cell.mui-media
+      a.mui-navigate-right(href="/setting/userinfo")
+        img.mui-media-object.mui-pull-left.head-img#head-img(src="../images/login.png")
+        div.mui-media-body
+          | Hello MUI
+          p.mui-ellipsis 账号:hellomui
+  ul.mui-table-view.mui-table-view-chevron
+    li.mui-table-view-cell
+      a.mui-navigate-right 账号与安全
+  ul.mui-table-view.mui-table-view-chevron
+    li.mui-table-view-cell
+      a.mui-navigate-right 新消息通知
+    li.mui-table-view-cell
+      a.mui-navigate-right 隐私
+    li.mui-table-view-cell
+      a.mui-navigate-right 通用
+
+  ul.mui-table-view
+    li.mui-table-view-cell(style="text-align: center;")
+      a 退出登录

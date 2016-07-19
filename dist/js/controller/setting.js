@@ -45,13 +45,13 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(14);
-	module.exports = __webpack_require__(15);
+	__webpack_require__(17);
+	module.exports = __webpack_require__(18);
 
 
 /***/ },
 
-/***/ 14:
+/***/ 17:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -64,11 +64,11 @@
 
 	var model = void 0;
 
-	var Index = function (_Basic) {
-	  _inherits(Index, _Basic);
+	var List = function (_Basic) {
+	  _inherits(List, _Basic);
 
-	  function Index() {
-	    _classCallCheck(this, Index);
+	  function List() {
+	    _classCallCheck(this, List);
 
 	    var _this = _possibleConstructorReturn(this, _Basic.call(this));
 
@@ -77,16 +77,16 @@
 	    return _this;
 	  }
 
-	  Index.prototype.init = function init() {};
+	  List.prototype.init = function init() {};
 
-	  return Index;
+	  return List;
 	}(Basic);
 
-	Core.expose('home', 'index', Index);
+	Core.expose('setting', 'list', List);
 
 /***/ },
 
-/***/ 15:
+/***/ 18:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -99,63 +99,25 @@
 
 	var model = void 0;
 
-	var Login = function (_Basic) {
-	  _inherits(Login, _Basic);
+	var Userinfo = function (_Basic) {
+	  _inherits(Userinfo, _Basic);
 
-	  function Login() {
-	    _classCallCheck(this, Login);
+	  function Userinfo() {
+	    _classCallCheck(this, Userinfo);
 
-	    var _this = _possibleConstructorReturn(this, _Basic.call(this, {
-	      vue: {
-	        data: {
-	          loginData: ''
-	        }
-	      }
-	    }));
+	    var _this = _possibleConstructorReturn(this, _Basic.call(this));
 
 	    model = _this;
 	    _this.init();
 	    return _this;
 	  }
 
-	  Login.prototype.init = function init() {
-	    this.register(['login']);
-	    //注册执行enter事件
-	    document.onkeydown = function (e) {
-	      var ev = document.all ? window.event : e;
-	      if (ev.keyCode == 13) {
-	        model.login();
-	      }
-	    };
-	  };
+	  Userinfo.prototype.init = function init() {};
 
-	  //登录
-
-
-	  Login.prototype.login = function login() {
-	    Cookies.set('token', '');
-	    var username = $.trim(model.mvvm.loginData.username);
-	    var pwd = $.trim(model.mvvm.loginData.password);
-	    model.mvvm.loginData.user_type = "admin"; //用户类型
-	    if (username == '') {
-	      Core.alert('danger', '用户名不能为空');return;
-	    }
-	    if (pwd == '') {
-	      Core.alert('danger', '密码不能为空');return;
-	    }
-	    API.get('admin/login', model.mvvm.loginData, function (data) {
-	      Cookies.set('token', data.token);
-	      Core.alert('success', '登录成功');
-	      window.location.href = "/";
-	    }, function () {
-	      Core.alert('danger', '用户名或密码错误');
-	    });
-	  };
-
-	  return Login;
+	  return Userinfo;
 	}(Basic);
 
-	Core.expose('home', 'login', Login);
+	Core.expose('setting', 'userinfo', Userinfo);
 
 /***/ }
 

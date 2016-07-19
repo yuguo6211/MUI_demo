@@ -1,5 +1,5 @@
 let model;
-class Index extends Basic {
+class List extends Basic {
   constructor(){
     super()
     model = this
@@ -8,4 +8,4 @@ class Index extends Basic {
   init(){
   }
 }
-Core.expose('home', 'index', Index)
+Core.expose('messages', 'list', List)

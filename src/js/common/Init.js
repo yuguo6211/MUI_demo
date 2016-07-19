@@ -6,7 +6,6 @@ window.SITE.Init = (callback)=> {
 
   getLoginState()
   .then(showMenuByRole)
-  .then(getRefcds)
   .then(callback)
 }
 
@@ -56,7 +55,7 @@ function showMenuByRole(){
 /**
  * 获取引用表数据
  */
-function getRefcds(){
+/*function getRefcds(){
   return new Promise((resolve)=> {
     Refcd.all().then((data)=> {
       SITE.Refcds = data
@@ -64,4 +63,4 @@ function getRefcds(){
     })
   })
   
-}
+}*/

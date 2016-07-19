@@ -1,11 +1,12 @@
 let model;
-class Index extends Basic {
+class List extends Basic {
   constructor(){
     super()
     model = this
     this.init()
   }
   init(){
+    
   }
 }
-Core.expose('home', 'index', Index)
+Core.expose('setting', 'list', List)

@@ -1,8 +1,8 @@
 $(function(){
   // lightbox
-  $(".fancybox").fancybox({
+ /* $(".fancybox").fancybox({
     arrows: false,
-  });
+  });*/
 })
 
  
