@@ -1,19 +1,23 @@
 extends ../layouts/layout.jade
 block con
-  div.title 本周统计
-  ul.mui-table-view
-    li.mui-table-view-cell
-      a.mui-navigate-right 订单统计
-    li.mui-table-view-cell
-      a.mui-navigate-right Item 2
-    li.mui-table-view-cell
-      a.mui-navigate-right Item 3
+  div.title 右侧带导航箭头
+  ul.mui-table-view.mui-table-view-chevron
+    li.mui-table-view-cell.mui-media
+      a.mui-navigate-right(href="/dataanalysis/pieweek")
+        img.mui-media-object.mui-pull-left(src="../images/cbd.jpg")
+        div.mui-media-body
+          | 本月订单统计
+          p.mui-ellipsis 销售订单、销售额
+    li.mui-table-view-cell.mui-media
+      a.mui-navigate-right
+        img.mui-media-object.mui-pull-left(src="../images/yuantiao.jpg")
+        div.mui-media-body
+          | 远眺
+          p.mui-ellipsis 静静的看这个世界，最后终于疯了
+    li.mui-table-view-cell.mui-media
+      a.mui-navigate-right
+        img.mui-media-object.mui-pull-left(src="../images/shuijiao.jpg")
+        div.mui-media-body
+          | 幸福
+          p.mui-ellipsis 能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？
 
-  div.title 本月统计
-  ul.mui-table-view
-    li.mui-table-view-cell
-      a.mui-navigate-right Item 1
-    li.mui-table-view-cell
-      a.mui-navigate-right Item 2
-    li.mui-table-view-cell
-      a.mui-navigate-right Item 3

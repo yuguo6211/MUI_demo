@@ -7,8 +7,8 @@ class Pieweek extends Basic {
   }
   init(){
     let barChart = echarts.init(document.getElementById('barChart'));
-    let lineChart = echarts.init(document.getElementById('lineChart'));
-    let pieChart = echarts.init(document.getElementById('pieChart'));
+    /*let lineChart = echarts.init(document.getElementById('lineChart'));*/
+    /*let pieChart = echarts.init(document.getElementById('pieChart'));*/
     let barChartoptions = {
       legend: {
         data: ['蒸发量', '降水量']
@@ -142,8 +142,8 @@ class Pieweek extends Basic {
       }]
     }
     barChart.setOption(barChartoptions);
-    lineChart.setOption(barChartoptions);
-    pieChart.setOption(pieChartoptions);
+    /*lineChart.setOption(barChartoptions);
+    pieChart.setOption(pieChartoptions);*/
   }
 }
 Core.expose('dataanalysis', 'pieweek', Pieweek)
