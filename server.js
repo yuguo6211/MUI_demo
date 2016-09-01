@@ -10,7 +10,7 @@ const Koa = require('koa'),
       url = require('url'),
       qs = require('querystring'),
       menus = require('./lib/menubar'),
-      /*pages = require('./lib/page'),*/
+      pages = require('./lib/page'),
       fs = require("fs")
 
 
@@ -30,7 +30,7 @@ app.use(views(__dirname + '/views', {
 
 // 路由
 let renderAction = async (ctx, controller, action)=> {
-  let vi = controller + '/' + action + '.jade'
+  let vi = controller + '/' + action + '.jade';
   await ctx.render(vi,
     {
       params: ctx.params,
@@ -40,7 +40,7 @@ let renderAction = async (ctx, controller, action)=> {
       },
       query: qs.parse(url.parse(ctx.request.url).query),
       /*menus: menus,*/
-     /* page: pages[controller + '/' + action]*/
+      page: pages[controller + '/' + action]
   })
 }
 

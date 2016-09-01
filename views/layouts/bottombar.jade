@@ -1,14 +1,14 @@
 nav.mui-bar.mui-bar-tab
-  a.mui-tab-items(href="/")
+  a.mui-tab-items(class="#{route.controller == 'home' ? 'mui-active' : ''}" href="/")
     span.mui-icon.mui-icon-home
     span.mui-tab-label 首页
-  a.mui-tab-items(href="/messages/list")
+  a.mui-tab-items(class="#{route.controller == 'messages' ? 'mui-active' : ''}" href="/messages/list")
     span.mui-icon.mui-icon-email
-      span.mui-badge 9
+      span.mui-badge 3
     span.mui-tab-label 消息
-  a.mui-tab-items(href="/dataanalysis/list")
+  a.mui-tab-items(class="#{route.controller == 'dataanalysis' ? 'mui-active' : ''}" href="/dataanalysis/list")
     span.mui-icon.mui-icon-list
-    span.mui-tab-label 数据
-  a.mui-tab-items(href="/setting/list")
+    span.mui-tab-label 数据统计
+  a.mui-tab-items(class="#{route.controller == 'setting' ? 'mui-active' : ''}" href="/setting/list")
     span.mui-icon.mui-icon-gear
     span.mui-tab-label 设置

@@ -45,12 +45,48 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(16);
+	__webpack_require__(16);
+	module.exports = __webpack_require__(17);
 
 
 /***/ },
 
 /***/ 16:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var model = void 0;
+
+	var Detail = function (_Basic) {
+	  _inherits(Detail, _Basic);
+
+	  function Detail() {
+	    _classCallCheck(this, Detail);
+
+	    var _this = _possibleConstructorReturn(this, _Basic.call(this));
+
+	    model = _this;
+	    _this.init();
+	    return _this;
+	  }
+
+	  Detail.prototype.init = function init() {};
+
+	  return Detail;
+	}(Basic);
+
+	Core.expose('messages', 'detail', Detail);
+
+/***/ },
+
+/***/ 17:
 /***/ function(module, exports) {
 
 	'use strict';
