@@ -1,14 +1,14 @@
 nav.mui-bar.mui-bar-tab
   a.mui-tab-items(class="#{route.controller == 'home' ? 'mui-active' : ''}" href="/")
-    span.mui-icon.mui-icon-home
+    span.mui-icon.fa.fa-home.fa-1x(style="font-size:20px")
     span.mui-tab-label 首页
   a.mui-tab-items(class="#{route.controller == 'messages' ? 'mui-active' : ''}" href="/messages/list")
-    span.mui-icon.mui-icon-email
+    span.mui-icon.fa.fa-envelope-o.fa-1x(style="font-size:20px")
       span.mui-badge 3
     span.mui-tab-label 消息
   a.mui-tab-items(class="#{route.controller == 'dataanalysis' ? 'mui-active' : ''}" href="/dataanalysis/list")
-    span.mui-icon.mui-icon-list
-    span.mui-tab-label 数据统计
+    span.mui-icon.fa.fa-database.fa-1x(style="font-size:20px")
+    span.mui-tab-label 数据中心
   a.mui-tab-items(class="#{route.controller == 'setting' ? 'mui-active' : ''}" href="/setting/list")
-    span.mui-icon.mui-icon-gear
+    span.mui-icon.fa.fa-cog.fa-1x(style="font-size:20px")
     span.mui-tab-label 设置
